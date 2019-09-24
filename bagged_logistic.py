@@ -1,3 +1,22 @@
+import pandas as pd
+from itertools import chain, tee, combinations
+from functools import reduce, wraps
+from operator import mul
+from collections import defaultdict, Counter
+import random
+import time
+import numpy as np
+import copy
+import json
+import os
+import sys
+
+import arrow
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
 """
 		probabilistic model by Shao and Li (supposed to be equivalent to Shapley); explanation in the original paper may seem rather unclear but
 		this https://stats.stackexchange.com/questions/255312/multi-channel-attribution-modelling-using-a-simple-probabilistic-model 
